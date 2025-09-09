@@ -9,7 +9,7 @@ export const navItems: NavItem[] = [
   { id: 'skills', label: 'Kỹ Năng', icon: Code },
   { id: 'projects', label: 'Dự Án', icon: FolderOpen },
   { id: 'certificates', label: 'Chứng Chỉ', icon: Award },
-  // { id: 'activities', label: 'Hoạt Động', icon: Users },
+  { id: 'activities', label: 'Hoạt Động', icon: Users },
   // { id: 'experience', label: 'Kinh Nghiệm', icon: Briefcase },
   { id: 'contact', label: 'Liên Hệ', icon: MessageSquare },
 ];
