@@ -1,6 +1,7 @@
-import { Card } from '@/components/ui/card';
-import { User, Calendar, MapPin, BookOpen, Trophy, Target, Lightbulb } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { User, Calendar, MapPin, BookOpen, Trophy, Target, Lightbulb, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
 
 const AboutSection: React.FC = () => {
   return (
@@ -107,13 +108,95 @@ const AboutSection: React.FC = () => {
               Hành trình lập trình của tôi bắt đầu vào năm 2023 tại FPT Polytechnic Cần Thơ, nơi tôi đạt GPA 3.96/4.0, một cột mốc thể hiện sự nỗ lực và đam mê. Từ những dòng HTML và CSS đầu tiên, tôi đã bị cuốn hút bởi khả năng biến ý tưởng thành hiện thực qua mã code.
             </p>
             <p className="mb-4">
-              Qua các dự án thực tế và hackathon, tôi đã rèn luyện kỹ năng với React, Next.js, Laravel, và Node.js. Mỗi thử thách là cơ hội để tôi trưởng thành, không chỉ về kỹ thuật mà còn về tư duy sáng tạo và làm việc nhóm.
+              Qua các dự án thực tế, tôi đã rèn luyện kỹ năng với React, Next.js, Laravel, và Node.js. Mỗi thử thách là cơ hội để tôi trưởng thành, không chỉ về kỹ thuật mà còn về tư duy sáng tạo và làm việc nhóm.
             </p>
             <p className="mb-4">
               Tầm nhìn của tôi là trở thành một giảng viên, truyền đam mê lập trình và kiến thức công nghệ đến thế hệ trẻ, giúp họ tự tin tạo nên những thay đổi tích cực cho cộng đồng.
             </p>
           </div>
         </Card>
+
+        <Card className="p-8 mb-12 bg-white/80 backdrop-blur-sm border-none shadow-md hover:shadow-xl transition-shadow">
+          <h3 className="text-2xl font-semibold text-teal-600 mb-6">Được Báo Chí Vinh Danh</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Bài báo cá nhân */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Card className="p-6 bg-white/90 border-l-4 border-teal-500 shadow-sm hover:shadow-md transition-shadow">
+                <CardContent>
+                  <h4 className="text-xl font-semibold text-teal-600 mb-2">
+                    Nữ Lập Trình Viên Tài Năng tại FPT Polytechnic Cần Thơ
+                  </h4>
+                  <img
+                    src="https://caodang.fpt.edu.vn/wp-content/uploads/2025/02/FPT-Polytechnic_CT_Le_thi_huynh_nhu-2.png"
+                    alt="Nữ Lập Trình Viên Tài Năng tại FPT Polytechnic"
+                    className="w-full h-64 object-cover rounded-md"
+                  />
+                  <p className="mt-3 text-gray-600 text-sm">
+                    Bài viết về Lê Thị Huỳnh Như – nữ lập trình viên tài năng chinh phục dự án thực tế tại FPT Polytechnic Cần Thơ.
+                  </p>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    asChild
+                    className="mt-4 border-teal-500 text-teal-500 hover:bg-teal-50"
+                  >
+                    <a
+                      href="https://caodang.fpt.edu.vn/tin-tuc-poly/le-thi-huynh-nhu-nu-lap-trinh-vien-tai-nang-chinh-phuc-du-an-thuc-te-tai-fpt-polytechnic-can-tho.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-1" />
+                      Đọc Bài Báo
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Bài báo nhóm */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <Card className="p-6 bg-white/90 border-l-4 border-pink-500 shadow-sm hover:shadow-md transition-shadow">
+                <CardContent>
+                  <h4 className="text-xl font-semibold text-pink-600 mb-2">
+                    Áp Dụng Agile & Scrum trong Dự Án Bán Bột Cà Phê
+                  </h4>
+                  <img
+                    src="https://caodang.fpt.edu.vn/wp-content/uploads/2025/08/FPT-Polytechnic_CT_web_ban_bot_ca_phe-4.png"
+                    alt="Áp Dụng Agile & Scrum trong Dự Án Bán Bột Cà Phê"
+                    className="w-full h-64 object-cover rounded-md"
+                  />
+                  <p className="mt-3 text-gray-600 text-sm">
+                    Sinh viên FPT Polytechnic áp dụng phương pháp Agile & Scrum trong triển khai dự án website bán bột cà phê, mang lại hiệu quả thực tiễn cao.
+                  </p>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    asChild
+                    className="mt-4 border-pink-500 text-pink-500 hover:bg-pink-50"
+                  >
+                    <a
+                      href="https://caodang.fpt.edu.vn/tin-tuc-poly/ung-dung-phuong-phap-agile-va-scrum-trong-trien-khai-du-an-website-ban-bot-ca-phe.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-1" />
+                      Đọc Bài Báo
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </Card>
+
 
         <div className="grid md:grid-cols-3 gap-6">
           <Card className="p-6 text-center bg-white/80 backdrop-blur-sm border-none shadow-md hover:shadow-xl transition-shadow">

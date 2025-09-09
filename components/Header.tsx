@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from "next/link";
+import Image from "next/image";
 
 interface HeaderProps {
   currentPage: string;
@@ -27,8 +28,14 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage, isMenuOpen
             transition={{ type: 'spring', stiffness: 300 }}
           >
             <button onClick={() => setCurrentPage("home")} className="flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-r from-teal-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                LN
+            <div className="w-10 h-10 bg-gradient-to-r from-teal-400 to-pink-500 rounded-full flex items-center justify-center shadow-lg overflow-hidden">
+                <Image
+                  src="/images/HUYNH NHU(CV).jpg" // đổi thành đường dẫn ảnh của bạn
+                  alt="Avatar"
+                  width={100}
+                  height={100}
+                  className="object-cover object-[center_20%] w-full h-full"
+                />
               </div>
               <span className="ml-3 text-lg font-semibold text-gray-900 tracking-tight">
                 Lê Thị Huỳnh Như
@@ -45,8 +52,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage, isMenuOpen
                   key={item.id}
                   onClick={() => setCurrentPage(item.id)}
                   className={`px-4 py-2 rounded-full text-xs font-medium transition-colors flex items-center ${currentPage === item.id
-                      ? 'bg-teal-100 text-teal-700'
-                      : 'text-gray-700 hover:text-teal-600 hover:bg-teal-50'
+                    ? 'bg-teal-100 text-teal-700'
+                    : 'text-gray-700 hover:text-teal-600 hover:bg-teal-50'
                     }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -89,8 +96,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage, isMenuOpen
                       setIsMenuOpen(false);
                     }}
                     className={`px-4 py-3 rounded-full text-xs font-medium transition-colors flex items-center ${currentPage === item.id
-                        ? 'bg-teal-100 text-teal-700'
-                        : 'text-gray-700 hover:text-teal-600 hover:bg-teal-50'
+                      ? 'bg-teal-100 text-teal-700'
+                      : 'text-gray-700 hover:text-teal-600 hover:bg-teal-50'
                       }`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

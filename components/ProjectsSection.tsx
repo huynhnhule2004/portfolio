@@ -37,12 +37,29 @@ const projects: Project[] = [
       'API backend mạnh mẽ với Laravel và PostgreSQL',
     ],
     technologies: ['Next.js', 'Laravel', 'PostgreSQL', 'Tailwind CSS', 'Cloudinary'],
-    images: [ '/images/cozy-1.1.png','/images/cozy-1.jpg', '/images/cozy-2.jpg', '/images/cozy-3.jpg'],
+    images: ['/images/cozy-1.1.png', '/images/cozy-1.jpg', '/images/cozy-2.jpg', '/images/cozy-3.jpg'],
     // githubLink: 'https://github.com/yourusername/cozygroup',
     demoLink: 'https://cozygroup.vercel.app',
   },
   {
     id: 2,
+    title: 'Ứng dụng Order Nhân viên - F&B System',
+    description: 'Ứng dụng di động React Native giúp nhân viên order món nhanh chóng cho khách trong hệ thống quản lý nhà hàng.',
+    longDescription:
+      'Ứng dụng được phát triển bằng React Native, hỗ trợ nhân viên nhà hàng order món trực tiếp cho khách hàng ngay tại bàn. Dữ liệu được đồng bộ với hệ thống quản lý nhà hàng, đảm bảo đơn hàng được xử lý nhanh chóng và chính xác. Giao diện thân thiện, trực quan, giúp nhân viên thao tác dễ dàng, giảm thiểu sai sót và nâng cao trải nghiệm khách hàng.',
+    features: [
+      'Đặt món trực tiếp từ thiết bị di động của nhân viên',
+      'Đồng bộ đơn hàng với hệ thống quản lý nhà hàng',
+      'Hỗ trợ cập nhật trạng thái đơn hàng theo thời gian thực',
+      'Giao diện tối ưu cho thao tác nhanh và dễ sử dụng',
+    ],
+    technologies: ['React Native', 'Expo', 'Laravel API', 'PostgreSQL', 'Tailwind CSS (NativeWind)'],
+    images: ['/images/cozy-app-1.jpg', '/images/cozy-app-2.jpg', '/images/cozy-app-3.jpg', '/images/cozy-app-4.jpg'],
+    // githubLink: 'https://github.com/yourusername/staff-order-app',
+    // demoLink: 'https://expo.dev/@yourusername/staff-order-app', 
+  },
+  {
+    id: 3,
     title: 'Website Bán Sách - Bookly',
     description: 'Website thương mại điện tử bán sách với chatbot AI tích hợp.',
     longDescription:
@@ -59,7 +76,7 @@ const projects: Project[] = [
     demoLink: 'http://nhulth.id.vn',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Website Template CV Xin Việc',
     description: 'Nền tảng tạo CV cá nhân hóa với các mẫu template chuyên nghiệp.',
     longDescription:
@@ -76,7 +93,7 @@ const projects: Project[] = [
     demoLink: 'https://cv-manager-98zq.vercel.app',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Hệ thống Quản lý Quán Cà Phê Thông Minh - Smart Coffee',
     description: 'Hệ thống quản lý quán cà phê với giao diện hiện đại và tính năng thông minh.',
     longDescription:
@@ -93,7 +110,7 @@ const projects: Project[] = [
     demoLink: 'https://coffee-smart-system.vercel.app',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Game Toán Học Hỗ Trợ Giảng Dạy - Số Chẵn & Số Lẻ',
     description: 'Trò chơi toán học thú vị hỗ trợ giáo viên dạy học sinh lớp 4.',
     longDescription:
@@ -110,7 +127,7 @@ const projects: Project[] = [
     demoLink: 'https://game-math-snowy.vercel.app',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Trò Chơi Luyện Cảm Âm Piano',
     description: 'Ứng dụng luyện cảm âm piano dành cho trẻ em học nhạc.',
     longDescription:
@@ -127,7 +144,7 @@ const projects: Project[] = [
     demoLink: 'https://music-app-ruby-five.vercel.app',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Website Dự Báo Thời Tiết',
     description: 'Website cung cấp thông tin thời tiết theo thời gian thực.',
     longDescription:
@@ -326,9 +343,8 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, title }) => {
             {images.map((_, index) => (
               <button
                 key={index}
-                className={`w-2 h-2 rounded-full ${
-                  index === currentIndex ? 'bg-white' : 'bg-white/50'
-                }`}
+                className={`w-2 h-2 rounded-full ${index === currentIndex ? 'bg-white' : 'bg-white/50'
+                  }`}
                 onClick={() => setCurrentIndex(index)}
                 aria-label={`Go to image ${index + 1}`}
               />

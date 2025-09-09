@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { FolderOpen, Mail, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
-
+import Image from "next/image";
 interface HomeSectionProps {
   typedText: string;
   setCurrentPage: (page: string) => void;
@@ -19,11 +19,17 @@ const HomeSection: React.FC<HomeSectionProps> = ({ typedText, setCurrentPage }) 
       >
         <div className="relative mb-10">
           <motion.div
-            className="w-36 h-36 mx-auto rounded-full bg-gradient-to-r from-teal-400 to-pink-500 flex items-center justify-center text-white text-5xl font-bold shadow-xl"
+            className="w-36 h-36 mx-auto rounded-full bg-gradient-to-r from-teal-400 to-pink-500 flex items-center justify-center shadow-xl overflow-hidden"
             whileHover={{ scale: 1.05 }}
-            transition={{ type: 'spring', stiffness: 300 }}
+            transition={{ type: "spring", stiffness: 300 }}
           >
-            LN
+            <Image
+              src="/images/HUYNH NHU(CV).jpg"
+              alt="Avatar"
+              width={144}
+              height={144}
+              className="object-cover object-[center_20%] w-full h-full"
+            />
           </motion.div>
           <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-pink-400 rounded-full border-4 border-white animate-pulse"></div>
         </div>
@@ -105,7 +111,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({ typedText, setCurrentPage }) 
               whileHover={{ scale: 1.05 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
-              <div className="text-3xl font-bold text-purple-600">4</div>
+              <div className="text-3xl font-bold text-purple-600">20+</div>
               <div className="text-sm text-gray-600">Chứng Chỉ</div>
             </motion.div>
           </Card>
@@ -115,7 +121,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({ typedText, setCurrentPage }) 
               whileHover={{ scale: 1.05 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
-              <div className="text-3xl font-bold text-orange-600">2+</div>
+              <div className="text-3xl font-bold text-orange-600">1,5+</div>
               <div className="text-sm text-gray-600">Năm Kinh Nghiệm</div>
             </motion.div>
           </Card>
